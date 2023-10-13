@@ -24,27 +24,35 @@ const Favorites = () => {
 
   if (curUser != null) {
     return (
-      <Container fluid>
+      <div>
         <NavBar />
-        <h2>Favorites</h2>
-        {parkInfo.map((prop) => {
-          if (prop.images.length >= 1) {
-            if (userFavs["Fav"].includes(prop.fullName)) {
-              return (
-                <SinglePark prop={prop} handle={changing} key={prop.fullName} />
-              );
+        <Container fluid className="pageStlye">
+          <h2>Favorites</h2>
+          {parkInfo.map((prop) => {
+            if (prop.images.length >= 1) {
+              if (userFavs["Fav"].includes(prop.fullName)) {
+                return (
+                  <SinglePark
+                    prop={prop}
+                    handle={changing}
+                    key={prop.fullName}
+                  />
+                );
+              }
             }
-          }
-        })}
-      </Container>
+          })}
+        </Container>
+      </div>
     );
   } else {
     return (
-      <Container fluid>
+      <div>
         <NavBar />
-        <h2>Favorites</h2>
-        <p>YOU ARE NOT SIGNED IN, PLEASE SIGN IN TO FAVORITE ITEMS</p>
-      </Container>
+        <Container fluid className="pageStlye">
+          <h2>Favorites</h2>
+          <p>YOU ARE NOT SIGNED IN, PLEASE SIGN IN TO FAVORITE ITEMS</p>
+        </Container>
+      </div>
     );
   }
 };

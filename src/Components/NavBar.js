@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import { Col, Container, Nav, Row } from "react-bootstrap";
+import { Col, Container, Nav, Row, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -7,47 +7,42 @@ const NavBar = () => {
     if (getAuth().currentUser == null) {
       return "Sign In/Up";
     } else {
-      return "Sign Out";
+      return "Profile";
     }
   };
   const showFav = () => {
     if (getAuth().currentUser != null) {
       return (
         <Col lg={1}>
-          <Nav.Item as="li">
-            <Link to={"/Favorites"}>Favorites</Link>
-          </Nav.Item>
+          <Nav.Link as={Link} to={"/Favorites"}>
+            Favorites
+          </Nav.Link>
         </Col>
       );
     }
   };
   return (
-    <Container fluid className="sticky">
-      <Row>
-        <Nav sticky="top" className="bg-black sticky-top" as="ul">
-          <Col lg={10} className="inline">
-            <Row>
-              <Col lg={1}>
-                <Nav.Item as="li">
-                  <Link to={"/"}>Home</Link>
-                </Nav.Item>
-              </Col>
-              <Col lg={1}>
-                <Nav.Item as="li">
-                  <Link to={"/NationalParks"}>Parks</Link>
-                </Nav.Item>
-              </Col>
-              {showFav()}
-            </Row>
-          </Col>
-          <Col lg={2} className=" justify-content-end">
-            <Nav.Item as="li">
-              <Link to={"/Account"}>{signedInOrOut()}</Link>
-            </Nav.Item>
-          </Col>
-        </Nav>
-      </Row>
-    </Container>
+    <Navbar expand="lg" className="sticky" bg="success" data-bs-theme="dark">
+      <Container fluid>
+        <Navbar.Brand as={Link} to={"/"}>
+          CA National Parks
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to={"/NationalParks"}>
+              Parks
+            </Nav.Link>
+            {showFav()}
+          </Nav>
+          <Nav>
+            <Nav.Link as={Link} to={"/Account"} className="justify-content-end">
+              {signedInOrOut()}
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

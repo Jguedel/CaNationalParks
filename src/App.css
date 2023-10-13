@@ -54,3 +54,31 @@ a:hover {
   top: 0px;
   z-index: 1;
 }
+
+.btn {
+  margin: 10px;
+}
+
+.carousel {
+  border: 5px solid black;
+  border-radius: 8px;
+}
+
+.linkHover:hover {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pageStlye {
+  max-width: 80%;
+  background-color: #4d453a;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+}
+.row {
+  margin-top: 20px;
+}

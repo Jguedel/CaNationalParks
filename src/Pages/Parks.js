@@ -48,18 +48,20 @@ const Parks = () => {
   }, []);
 
   return (
-    <Container fluid>
+    <div>
       <NavBar />
-      <h2>Parks</h2>
-      {parkInfo.map((props) => {
-        let img = props.images;
-        if (props.images.length >= 1) {
-          return (
-            <SinglePark prop={props} handle={changing} key={props.fullName} />
-          );
-        }
-      })}
-    </Container>
+      <Container fluid className="pageStlye">
+        <h2>Parks</h2>
+        {parkInfo.map((props) => {
+          let img = props.images;
+          if (props.images.length >= 1) {
+            return (
+              <SinglePark prop={props} handle={changing} key={props.fullName} />
+            );
+          }
+        })}
+      </Container>
+    </div>
   );
 };
 

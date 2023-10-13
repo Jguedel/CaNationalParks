@@ -47,6 +47,7 @@ const SinglePark = ({ prop, handle }) => {
     if (userFavs["Fav"].includes(pName)) {
       favText = (
         <Button
+          variant="dark"
           onClick={() => {
             delFav(pName);
             handle();
@@ -58,6 +59,7 @@ const SinglePark = ({ prop, handle }) => {
     } else {
       favText = (
         <Button
+          variant="dark"
           onClick={() => {
             addFav(pName);
             handle();
@@ -82,8 +84,8 @@ const SinglePark = ({ prop, handle }) => {
           key={prop.id}
         >
           <Col
-            lg={{ span: 6, offset: 3 }}
-            style={{ outline: "2px solid black" }}
+            lg={{ span: 8, offset: 2 }}
+            style={{ border: "2px solid black", borderRadius: "8px" }}
           >
             <h3>{prop.fullName}</h3>
             <div
@@ -97,7 +99,7 @@ const SinglePark = ({ prop, handle }) => {
               }}
             />
             <Link to={`/MoreInfo/${prop.fullName}/${prop.id}`}>
-              <Button>MORE INFO</Button>
+              <Button variant="dark">MORE INFO</Button>
             </Link>
             {favCheck(prop.fullName)}
           </Col>
