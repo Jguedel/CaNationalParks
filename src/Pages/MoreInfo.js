@@ -29,7 +29,7 @@ const MoreInfo = () => {
       <Container fluid className="pageStlye">
         <Row>
           <Col xl={{ span: 1 }}>
-            <Link to={"/NationalParks"}>
+            <Link to={"/CaNationalParks/NationalParks"}>
               <Button variant="dark">Back</Button>
             </Link>
           </Col>
