@@ -14,7 +14,7 @@ const NavBar = () => {
     if (getAuth().currentUser != null) {
       return (
         <Col lg={1}>
-          <Nav.Link as={Link} to={"/Favorites"}>
+          <Nav.Link as={Link} to={"/CaNationalParks/Favorites"}>
             Favorites
           </Nav.Link>
         </Col>
@@ -30,13 +30,17 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={"/NationalParks"}>
+            <Nav.Link as={Link} to={"/CaNationalParks/NationalParks"}>
               Parks
             </Nav.Link>
             {showFav()}
           </Nav>
           <Nav>
-            <Nav.Link as={Link} to={"/Account"} className="justify-content-end">
+            <Nav.Link
+              as={Link}
+              to={"/CaNationalParks/Account"}
+              className="justify-content-end"
+            >
               {signedInOrOut()}
             </Nav.Link>
           </Nav>

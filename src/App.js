@@ -33,12 +33,15 @@ function App() {
             element={<Home />}
             className="float-left"
           />
-          <Route path="/NationalParks" element={<Parks />} />
-          <Route path="/Account" element={<SignInUp />} />
-          <Route path="/Favorites" element={<Favorites />} />
-          <Route path="/MoreInfo/:parkName/:parkId" element={<MoreInfo />} />
+          <Route path="/CaNationalParks/NationalParks" element={<Parks />} />
+          <Route path="/CaNationalParks/Account" element={<SignInUp />} />
+          <Route path="/CaNationalParks/Favorites" element={<Favorites />} />
           <Route
-            path="/*"
+            path="/CaNationalParks/MoreInfo/:parkName/:parkId"
+            element={<MoreInfo />}
+          />
+          <Route
+            path="/CaNationalParks/*"
             element={
               <Container fluid>
                 <NavBar />

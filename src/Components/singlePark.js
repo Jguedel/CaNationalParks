@@ -98,7 +98,7 @@ const SinglePark = ({ prop, handle }) => {
                 margin: "auto",
               }}
             />
-            <Link to={`/MoreInfo/${prop.fullName}/${prop.id}`}>
+            <Link to={`/CaNationalParks/MoreInfo/${prop.fullName}/${prop.id}`}>
               <Button variant="dark">MORE INFO</Button>
             </Link>
             {favCheck(prop.fullName)}
