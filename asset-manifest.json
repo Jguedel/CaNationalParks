@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CaNationalParks/static/css/main.e74830f2.css",
-    "main.js": "/CaNationalParks/static/js/main.21e657db.js",
+    "main.js": "/CaNationalParks/static/js/main.7d292125.js",
     "static/js/787.15e90883.chunk.js": "/CaNationalParks/static/js/787.15e90883.chunk.js",
     "static/media/homePG.png": "/CaNationalParks/static/media/homePG.32d2f93dffba54e45cb2.png",
     "index.html": "/CaNationalParks/index.html",
     "main.e74830f2.css.map": "/CaNationalParks/static/css/main.e74830f2.css.map",
-    "main.21e657db.js.map": "/CaNationalParks/static/js/main.21e657db.js.map",
+    "main.7d292125.js.map": "/CaNationalParks/static/js/main.7d292125.js.map",
     "787.15e90883.chunk.js.map": "/CaNationalParks/static/js/787.15e90883.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e74830f2.css",
-    "static/js/main.21e657db.js"
+    "static/js/main.7d292125.js"
   ]
 }
