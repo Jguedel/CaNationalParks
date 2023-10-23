@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className="sticky" bg="success" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand as={Link} to={"/"}>
+        <Navbar.Brand as={Link} to={"/CaNationalParks"}>
           CA National Parks
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
