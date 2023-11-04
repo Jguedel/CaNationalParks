@@ -15,14 +15,14 @@ import NavBar from "../Components/NavBar";
 const MoreInfo = () => {
   const { parkName, parkId } = useParams();
   const parkInfo = useContext(parkData).data.data;
-  console.log(parkInfo);
+  // console.log(parkInfo);
   let parkOn = "";
   parkInfo.map((props) => {
     if (props["id"] === parkId) {
       parkOn = props;
     }
   });
-  console.log(parkInfo);
+  // console.log(parkInfo);
   return (
     <div>
       <NavBar />

@@ -29,7 +29,7 @@ const SignInUp = () => {
     getDb();
   }, [curUser]);
   const handleSubmit = (event) => {
-    console.log(event);
+    // console.log(event);
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -56,7 +56,7 @@ const SignInUp = () => {
         }
       });
     }
-    console.log(getFromLoc("favs", true));
+    // console.log(getFromLoc("favs", true));
   }
 
   async function reDirect() {
@@ -74,8 +74,8 @@ const SignInUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
+        // console.log(errorCode);
+        // console.log(errorMessage);
         if (errorCode === "auth/invalid-login-credentials") {
           alert("incorrect Login info please try again or create an account");
         }
@@ -86,7 +86,7 @@ const SignInUp = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        console.log("sign out");
+        // console.log("sign out");
         setCurUser((curUser) => null);
         localStorage.clear();
         addToLoc({ Fav: "" }, "favs", true);
@@ -97,7 +97,6 @@ const SignInUp = () => {
   };
 
   const ClickedCreate = (e) => {
-    console.log(e.currentTarget.parentElement);
     const form = e.currentTarget.parentElement;
     let email = form.querySelector("#validationCustom01").value;
     let pass = form.querySelector("#validationCustom02").value;
@@ -119,7 +118,6 @@ const SignInUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
         if (errorCode === "auth/email-already-in-use") {
           alert("Email already in use please try another");
         }
@@ -138,8 +136,6 @@ const SignInUp = () => {
         // ..
       });
   };
-
-  console.log(curUser);
 
   if (curUser != null) {
     return (
